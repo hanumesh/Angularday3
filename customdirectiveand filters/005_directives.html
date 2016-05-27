@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Directives</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[]);
+		angular.module("app")
+		.controller("fc", function($scope){
+			$scope.message = "Hello World";
+		});
+		angular.module("app")
+		.directive("myDir", function(){
+			return {
+				templateUrl : "view/btn.html",
+				restrict : "EACM",
+				replace : true
+			};
+		});
+	</script>
+</head>
+<body ng-app="app" ng-controller="fc">
+	<my-dir></my-dir>
+	<hr/>
+	<div my-dir></div>
+	<hr/>
+	<div class="my-dir"></div>
+	<hr/>
+	<!-- directive:my-dir -->
+</body>
+</html>

@@ -1,2 +1,2 @@
-# angular-27th-may
-Angular Training Day 3
+# angular-26th-may-node
+Angular Data with Node

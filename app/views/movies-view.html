@@ -1,0 +1,43 @@
+<div class="col-xs-4">
+	<div class="page-heading">
+		<h1>
+			Add Movie
+		</h1>
+	</div>
+	<form>
+		<div class="form-group">
+			<label for="ti2">Movie Title</label>
+			<input class="form-control" type="text" ng-model="title"  />
+		</div>
+		<div class="form-group">
+			<label for="ti6">Movie Poster</label>
+			<input class="form-control" type="text" ng-model="poster" />
+		</div>
+		<div class="form-group">
+			<input ng-click="addMovie()" value="Add Movie" class="btn btn-primary" type="submit" />
+		</div>
+	</form>
+</div>
+
+<div class="col-xs-8">
+	<div class="page-heading">
+		<h1>
+			Movies List
+		</h1>
+	</div>
+	<h3>you selected the hero number : {{heroId}} and he/she has {{movies.length}} movies</h3>
+	<table class="table table-bordered">
+		<tr>
+			<th>Sl #</th>
+			<th>Title</th>
+			<th>Photo</th>
+		</tr>
+		<tr ng-repeat="movie in movies">
+			<td>{{movie.sl}}</td>
+			<td>{{movie.title}}</td>
+			<td><img ng-src="{{movie.poster}}" width="40" align="absmiddle" /></td>
+		</tr>
+	</table>
+	<hr/>
+	<button class="btn btn-info" ng-click="goBack()">Back to Heros</button>
+</div>

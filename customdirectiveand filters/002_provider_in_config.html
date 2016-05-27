@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Provider</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[])
+		.controller("simpleController",function($scope, synechron){
+			console.log("hello from controller")
+			$scope.message = synechron.message;
+		})
+		.config(function($provide){
+			console.log("hello from config")
+			// $provide.provider("synechron", function($http){
+			$provide.provider("synechron", function(){
+				this.$get = function(){
+				console.log("hello from config provider")
+			//	var data = "";
+			//	$http.get("data/heros.json")
+			//	.success(function(r,s,x){
+			//		data = r;
+			//	});
+				
+					return {
+						message : "Welcome to your life"
+			//		         hd : data
+					}
+				}
+			})
+		})
+	</script>
+</head>
+<body ng-app="app">
+	<div class="box" ng-controller="simpleController">
+		<h1>{{ message }}</h1>
+	</div>
+</body>
+</html>

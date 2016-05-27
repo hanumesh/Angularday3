@@ -1,0 +1,60 @@
+<div class="col-xs-4">
+	<div class="page-heading">
+		<h1>
+			Add New Hero
+		</h1>
+	</div>
+	<form>
+		<div class="form-group">
+			<label for="ti2">Hero Title</label>
+			<input class="form-control" type="text" ng-model="title"  />
+		</div>
+		<div class="form-group">
+			<label for="ti3">Hero City</label>
+			<input class="form-control" type="text"ng-model="city"  />
+		</div>
+		<div class="form-group">
+			<label for="ti4">Hero Power</label>
+			<input class="form-control" min="1" max="10" type="range" ng-model="power"  />
+		</div>
+		<div class="form-group">
+			<label for="ti6">Hero Photo</label>
+			<input class="form-control" type="text" ng-model="photo" />
+		</div>
+		<div class="form-group">
+			<input ng-click="addHero()" value="Add Hero" class="btn btn-primary" type="submit" />
+		</div>
+	</form>
+</div>
+
+
+<div class="col-xs-8">
+	<div class="page-heading">
+		<h1>
+			All Heros Listed
+		</h1>
+	</div>
+	<table class="table table-striped" >
+		<tr>
+			<th>Sl #</th>
+			<th>Title</th>
+			<th>Photo</th>
+			<th>City</th>
+			<th>Power</th>
+			<th>Movies Acted</th>
+			<th>View Movies</th>
+		</tr>
+		<tr ng-repeat="hero in heroes">
+			<td>{{hero.id}}</td>
+			<td>{{hero.title}}</td>
+			<td><img ng-src="{{hero.photo}}" width="40" align="absmiddle" /></td>
+			<td>{{hero.city}}</td>
+			<td>{{hero.power}}</td>
+			<td>
+					{{hero.movieslist.length}}
+					<img src="{{ hero.movieslist[0].poster}}" width="20"/>
+			</td>
+			<td><a class="btn btn-primary" href="#/movies/{{hero.id}}">view movies</a></td>
+		</tr>
+	</table>
+</div>

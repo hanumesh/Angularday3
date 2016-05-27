@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Filter</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[]);
+		angular.module("app").controller("fc", function($scope){
+			$scope.gen = "male";
+			$scope.user = "vijay";
+			$scope.power = 6;
+		});
+		/*
+		angular.module("app").filter("greeting", function(){
+			return function(data,msg, gen){
+				if(gen == "male"){
+					return msg+" Mr. "+data
+				}else{
+					return msg+" Mrs. "+data
+				}
+				
+			}
+		})
+		 */
+		angular.module("app").filter("greeting", function(){
+			return function(data,obj,g){
+				if(obj.p < 5){
+					return data+" is weak";
+				}else{
+					return data+" is strong";
+				}
+				
+			}
+		})
+	</script>
+</head>
+<body ng-app="app" ng-controller="fc">
+	<h1>{{ user | greeting: { p : power} | greeting: { g : gen }  | uppercase }}</h1>
+</body>
+</html>

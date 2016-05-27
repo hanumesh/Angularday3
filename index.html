@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Heros Application</title>
+	<link href="style/bootstrap.css" rel="stylesheet" />
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<script src="app/modules/app.js"></script>
+	<script src="app/config/app-config.js"></script>
+	<script src="app/controllers/heroes-controller.js"></script>
+	<script src="app/controllers/movies-contoller.js"></script>
+	<script src="app/services/factory-service.js"></script>
+</head>
+<body ng-app="app">
+	<div class="container">
+		<div class="row">
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>

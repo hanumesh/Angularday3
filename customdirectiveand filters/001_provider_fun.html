@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Provider</title>
+	<script src="lib/angular.js"></script>
+	<script>
+		angular.module("app",[])
+		.controller("simpleController",function($scope, synechron){
+			$scope.message = synechron.message;
+		})
+		.provider("synechron",function(){
+			console.log("hello from provider");
+			this.$get = function(){
+				return {
+					message : "Welcome to your life"
+				}
+			}
+		})
+		.config(function(){
+			console.log("hello from config");
+		})
+	</script>
+</head>
+<body ng-app="app">
+	<div class="box" ng-controller="simpleController">
+		<h1>{{ message }}</h1>
+	</div>
+</body>
+</html>

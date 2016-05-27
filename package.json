@@ -1,0 +1,15 @@
+{
+  "name": "ng-data-with-node-server",
+  "version": "1.0.0",
+  "description": "this example is to illustrate communication with nodejs and angular application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vijay",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}

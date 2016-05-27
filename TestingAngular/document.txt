@@ -1,0 +1,14 @@
+// node modules
+karma -g (CLI mode )
+karma-jamine
+jasmine
+############################
+npm install angular
+			mocks
+			copy agular-mocks.js to the lib dir
+			
+################################
+
+karma -v
+karma init (initilalizr a test app)
+karma start 			
