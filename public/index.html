@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+		.btn{
+			width: 100px;
+		}
+	</style>
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<script src="heroapp/modules/app.js"></script>
+	<script src="heroapp/config/routeconfig.js"></script>
+	<script src="heroapp/controllers/herocontroller.js"></script>
+	<script src="heroapp/controllers/moviecontroller.js"></script>
+	<script src="heroapp/services/herofactory.js"></script>
+</head>
+<body ng-app="app" ng-controller="heroController">
+	<h1>Welcome to Synechron</h1>
+	<div class="container">
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>

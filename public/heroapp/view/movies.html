@@ -1,0 +1,13 @@
+<table class="table">
+	<tr>
+		<th>Sl #</th>
+		<th>Title</th>
+		<th>Poster</th>
+	</tr>
+	<tr ng-repeat="movie in movies">
+		<td>{{ movie.sl }}</td>
+		<td>{{ movie.title }}</td>
+		<td><img class="img-round" ng-src="{{ movie.poster }}" align="absmiddle" width="50" /></td>
+	</tr>
+</table>
+<a class="btn btn-default" href="#/">Home</a>

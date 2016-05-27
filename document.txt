@@ -1,0 +1,6 @@
+JSON object is strict ("id")
+js object is not that stirct
+
+1. body-parser (middle-ware)
+-->string to jsondata
+-->jsondata to string
